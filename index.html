@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山口将輝（Masaki Yamaguchi）| 株式会社MYfuture 代表取締役</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warmbg: '#FAF8F5',
+                        warmcard: '#FFFFFF',
+                        warmborder: '#E8E2D9',
+                        brandnavy: '#1A365D',
+                        brandblue: '#2B6CB0',
+                        brandgold: '#C59B27',
+                        brandgoldlight: '#FDF8EA',
+                        darkslate: '#2D3748',
+                        mutedslate: '#718096',
+                    },
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Arial', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', 'Meiryo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-warmbg text-darkslate font-sans antialiased selection:bg-brandgoldlight selection:text-brandnavy">
+
+    <!-- Chosen Palette: Warm Ivory & Sage Slate -->
+    <!-- Application Structure Plan: 
+        本SPAは、山口将輝氏の経営思想「四方良し」と事業構造・メディアメッセージに特化して情報を整理・提示しています。
+        ご要望に基づき、SDGsセクション・共鳴度診断セクション・特定のプロフィール文言等を削除し、より洗練されたシンプルな構造に最適化しました。
+        1. ヒーロー＆ビジョンサマリー：親の想い「将輝（将来が輝く）」と企業ミッションの連動性を提示（プロフィール写真付き）。
+        2. 経営思想「四方良し」：お客様・ビジネスパートナー・世間・自分自身の4軸モデルと問題解決マインドセット。
+        3. 事業構造：リカレント教育、Webマーケティング、プロモーションの3領域をインタラクティブタブで構造化。
+        4. パブリックイメージ＆メディア・キャリアメッセージ：各種メディア掲載実績と若手へ向けたメッセージ。
+    -->
+    <!-- Visualization & Content Choices:
+        - 四方良しモデル: HTML/Tailwind グリッド構成＋JavaScriptアクティブ表示（重複アイコン解消済）。
+        - 事業エコシステム: タブ切替 UI ＋ ステップフロー表示（SVG非使用、CSS枠線とUnicode文字で構築）。
+        - プロフィール写真: 提供画像（プロフィール写真２.jpg）の表示に対応。
+        - 確認事項: SVGグラフィックスおよびMermaid JSは一切使用していません。
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-warmbg/95 backdrop-blur border-b border-warmborder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="w-3 h-3 rounded-full bg-brandgold inline-block"></span>
+                <a href="#hero" class="font-bold text-lg sm:text-xl tracking-tight text-brandnavy">
+                    山口将輝 <span class="text-xs font-normal text-mutedslate ml-1 sm:inline hidden">| 株式会社MYfuture 代表取締役</span>
+                </a>
+            </div>
+            
+            <nav class="flex space-x-6 text-sm font-medium text-mutedslate">
+                <a href="#philosophy" class="hover:text-brandnavy transition-colors">「四方良し」思想</a>
+                <a href="#business" class="hover:text-brandnavy transition-colors">事業構造</a>
+                <a href="#media" class="hover:text-brandnavy transition-colors">メディア・メッセージ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-16">
+
+        <!-- Hero Section -->
+        <section id="hero" class="bg-white rounded-2xl p-6 sm:p-10 border border-warmborder shadow-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-brandgoldlight text-brandgold px-3 py-1 rounded-full text-xs font-bold border border-brandgold/20">
+                        <span>✦</span>
+                        <span>名前の由来：「将来が輝くように」</span>
+                    </div>
+                    <h1 class="text-2xl sm:text-4xl font-extrabold text-brandnavy leading-tight">
+                        あなたらしさが輝く将来を、<br class="hidden sm:inline">共に創り出す。
+                    </h1>
+                    <p class="text-mutedslate text-sm sm:text-base leading-relaxed">
+                        神戸大学大学院での工学研究と大手メーカー勤務を経て独立。大人のリカレント教育とAI・Webマーケティングの融合により、知識の循環と個人の才能開花を追求しています。
+                    </p>
+                    
+                    <!-- Quick Stat Badges -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                        <div class="bg-warmbg p-3 rounded-xl border border-warmborder text-center">
+                            <p class="text-xs text-mutedslate font-medium">学術背景</p>
+                            <p class="text-sm font-bold text-brandnavy mt-1">神戸大大学院工学研究科</p>
+                        </div>
+                        <div class="bg-warmbg p-3 rounded-xl border border-warmborder text-center">
+                            <p class="text-xs text-mutedslate font-medium">経営軸</p>
+                            <p class="text-sm font-bold text-brandnavy mt-1">「四方良し」の探求</p>
+                        </div>
+                        <div class="bg-warmbg p-3 rounded-xl border border-warmborder text-center">
+                            <p class="text-xs text-mutedslate font-medium">コア事業</p>
+                            <p class="text-sm font-bold text-brandnavy mt-1">リカレント教育 & AI集客</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-warmbg p-6 rounded-xl border border-warmborder text-center space-y-4">
+                    <img src="プロフィール写真２.jpg" alt="山口将輝" class="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full object-cover border-4 border-white shadow">
+                    <div>
+                        <h2 class="text-lg font-bold text-brandnavy">山口 将輝（Masaki Yamaguchi）</h2>
+                        <p class="text-xs text-mutedslate">株式会社MYfuture 代表取締役</p>
+                        <p class="text-xs text-brandgold font-bold mt-1">東京都渋谷区恵比寿</p>
+                    </div>
+                    <blockquote class="text-xs italic text-darkslate bg-white p-3 rounded-lg border border-warmborder leading-relaxed text-left">
+                        「自分の名前『将輝』に込められた『将来が輝くように』という願いを基盤とし、お客様・ビジネスパートナー・世間・自分自身の『四方』が共に輝く未来を共創することが私の使命です。」
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 1: Philosophy - 四方良し -->
+        <section id="philosophy" class="space-y-6">
+            <div class="border-l-4 border-brandgold pl-4">
+                <h2 class="text-xl sm:text-2xl font-bold text-brandnavy">経営思想「四方良し」と問題解決思考</h2>
+                <p class="text-xs sm:text-sm text-mutedslate mt-1">
+                    伝統的な近江商人「三方良し」に「自分自身」を足した独自の意思決定フレームワーク。
+                </p>
+            </div>
+
+            <p class="text-sm text-darkslate leading-relaxed bg-white p-4 rounded-xl border border-warmborder">
+                本セクションでは、山口氏が実践する意思決定基準「四方良し」を分解します。自己犠牲でも自己利害のみでもなく、「お客様・ビジネスパートナー・世間・自分自身」の全員が持続的に幸福であり続ける仕組みを探求しています。
+            </p>
+
+            <!-- Interactive Grid of 4 Pillars -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div onclick="selectPillar(0)" id="pillar-card-0" class="cursor-pointer bg-white p-5 rounded-2xl border-2 border-brandblue shadow-sm hover:shadow-md transition-all space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl">👥</span>
+                        <span class="text-xs font-bold bg-blue-100 text-brandblue px-2 py-0.5 rounded-full">第1の軸</span>
+                    </div>
+                    <h3 class="font-bold text-brandnavy text-base">お客様</h3>
+                    <p class="text-xs text-mutedslate">本質的な能力開発と選択肢の拡大</p>
+                </div>
+
+                <div onclick="selectPillar(1)" id="pillar-card-1" class="cursor-pointer bg-white p-5 rounded-2xl border border-warmborder shadow-sm hover:shadow-md transition-all space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl">🤝</span>
+                        <span class="text-xs font-bold bg-gray-100 text-mutedslate px-2 py-0.5 rounded-full">第2の軸</span>
+                    </div>
+                    <h3 class="font-bold text-brandnavy text-base">ビジネスパートナー</h3>
+                    <p class="text-xs text-mutedslate">知見の最大化と適正成果の還元</p>
+                </div>
+
+                <div onclick="selectPillar(2)" id="pillar-card-2" class="cursor-pointer bg-white p-5 rounded-2xl border border-warmborder shadow-sm hover:shadow-md transition-all space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl">🌐</span>
+                        <span class="text-xs font-bold bg-gray-100 text-mutedslate px-2 py-0.5 rounded-full">第3の軸</span>
+                    </div>
+                    <h3 class="font-bold text-brandnavy text-base">世間（社会・SDGs）</h3>
+                    <p class="text-xs text-mutedslate">環境負荷低減・国際人道支援</p>
+                </div>
+
+                <div onclick="selectPillar(3)" id="pillar-card-3" class="cursor-pointer bg-white p-5 rounded-2xl border border-warmborder shadow-sm hover:shadow-md transition-all space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl">✦</span>
+                        <span class="text-xs font-bold bg-gray-100 text-mutedslate px-2 py-0.5 rounded-full">第4の軸</span>
+                    </div>
+                    <h3 class="font-bold text-brandnavy text-base">自分自身</h3>
+                    <p class="text-xs text-mutedslate">事業の持続性と情熱の維持</p>
+                </div>
+            </div>
+
+            <!-- Detail Display Area -->
+            <div id="pillar-detail-box" class="bg-brandgoldlight/40 border border-brandgold/30 p-6 rounded-2xl space-y-3">
+                <h3 class="text-base font-bold text-brandnavy">
+                    <span id="pillar-title">お客様における「良し」</span>
+                </h3>
+                <p class="text-xs sm:text-sm text-darkslate leading-relaxed" id="pillar-desc">
+                    書籍や一次メディアでは得られない、一流の有識者による実践的コンテンツを提供。コミュニケーション、資産運用、キャリア開発等、大人の学び直しを通じて個人の才能を開花させ、豊かな人生の選択肢を提供します。
+                </p>
+            </div>
+
+            <!-- Troubleshooting Framework Quote Card -->
+            <div class="bg-white p-6 rounded-2xl border border-warmborder space-y-4">
+                <h3 class="font-bold text-brandnavy text-base flex items-center space-x-2">
+                    <span class="text-brandgold">💡</span>
+                    <span>トラブル時のマインドセット：「障害は神様からの贈り物（テスト）」</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-darkslate">
+                    <div class="bg-warmbg p-4 rounded-xl border border-warmborder space-y-2">
+                        <p class="font-bold text-brandnavy">【従来の発想】</p>
+                        <p class="text-mutedslate">問題発生時に当事者間のみで利害を調整しようとし、妥協点（二方良し止まり）を探すため、根本解決に至らないか不満が残る。</p>
+                    </div>
+                    <div class="bg-brandnavy text-white p-4 rounded-xl space-y-2">
+                        <p class="font-bold text-brandgold">【山口氏の「四方良し」アプローチ】</p>
+                        <p class="leading-relaxed">トラブルを「四方（お客様・ビジネスパートナー・世間・自分自身）全てにメリットをもたらす革新的解法を見つけ出すためのテスト」と捉え直し、楽しみながら多角的なアイデアを創出する。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 2: Business Structure & Ecosystem -->
+        <section id="business" class="space-y-6">
+            <div class="border-l-4 border-brandgold pl-4">
+                <h2 class="text-xl sm:text-2xl font-bold text-brandnavy">株式会社MYfuture の事業構造とナレッジ・エコシステム</h2>
+                <p class="text-xs sm:text-sm text-mutedslate mt-1">
+                    知識の創出者と需要者をAI・Webマーケティング技術で高精度に結ぶ多角展開。
+                </p>
+            </div>
+
+            <p class="text-sm text-darkslate leading-relaxed bg-white p-4 rounded-xl border border-warmborder">
+                同社は東京都渋谷区恵比寿に拠点を置き、大人のリカレント教育（学び直し）を中核としています。一流の講師陣が持つナレッジを体系化し、最適なユーザー層へ届ける高精度なマーケティングエコシステムを構築しています。
+            </p>
+
+            <!-- Interactive Service Selector -->
+            <div class="bg-white p-6 rounded-2xl border border-warmborder space-y-6">
+                <!-- Navigation Tabs -->
+                <div class="flex flex-wrap gap-2 border-b border-warmborder pb-4">
+                    <button onclick="switchBizTab('recurrent')" id="biz-tab-recurrent" class="px-4 py-2 rounded-xl font-bold text-xs sm:text-sm bg-brandnavy text-white transition-all">
+                        大人のリカレント教育研修
+                    </button>
+                    <button onclick="switchBizTab('marketing')" id="biz-tab-marketing" class="px-4 py-2 rounded-xl font-bold text-xs sm:text-sm bg-warmbg text-mutedslate hover:bg-warmborder transition-all">
+                        Webマーケティング・広告運用
+                    </button>
+                    <button onclick="switchBizTab('consulting')" id="biz-tab-consulting" class="px-4 py-2 rounded-xl font-bold text-xs sm:text-sm bg-warmbg text-mutedslate hover:bg-warmborder transition-all">
+                        プロモーション・コンサルティング
+                    </button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div id="biz-content-area" class="space-y-4">
+                    <!-- Dynamic Javascript population -->
+                </div>
+
+                <!-- Knowledge Flow Diagram (HTML/Tailwind) -->
+                <div class="pt-4 border-t border-warmborder">
+                    <h4 class="text-xs font-bold text-mutedslate uppercase tracking-wider mb-3">ナレッジ流通メカニズム（プラットフォーム構造）</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-center text-xs">
+                        <div class="p-3 bg-warmbg rounded-xl border border-warmborder">
+                            <span class="font-bold text-brandnavy block mb-1">1. 知見の体系化</span>
+                            <span class="text-mutedslate">トップ講師・著者と提携し、実践的プログラムを設計</span>
+                        </div>
+                        <div class="p-3 bg-warmbg rounded-xl border border-warmborder">
+                            <span class="font-bold text-brandnavy block mb-1">2. 高精度マッチング</span>
+                            <span class="text-mutedslate">AI・広告データ分析で必要とする潜在層へ届ける</span>
+                        </div>
+                        <div class="p-3 bg-warmbg rounded-xl border border-warmborder">
+                            <span class="font-bold text-brandnavy block mb-1">3. 価値創造・共創</span>
+                            <span class="text-mutedslate">お客様の選択肢拡大とパートナーの事業成長を両立</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Section 3: Media Profile & Messages -->
+        <section id="media" class="space-y-6">
+            <div class="border-l-4 border-brandgold pl-4">
+                <h2 class="text-xl sm:text-2xl font-bold text-brandnavy">パブリックイメージとメディア掲載実績</h2>
+                <p class="text-xs sm:text-sm text-mutedslate mt-1">
+                    第三者評価から捉える山口将輝氏の起業家像と若年層へのキャリアメッセージ。
+                </p>
+            </div>
+
+            <p class="text-sm text-darkslate leading-relaxed bg-white p-4 rounded-xl border border-warmborder">
+                メディア露出においては、「理系大学院の論理的思考と人間味あふれる情熱を兼ね備えたリーダー」として評価されています。特にAI時代における自身のスキル研鑽と挑戦の重要性を発信しています。
+            </p>
+
+            <!-- Media Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-5 rounded-2xl border border-warmborder space-y-2">
+                    <span class="text-xs font-bold text-brandblue bg-blue-50 px-2 py-0.5 rounded">ラジオ / ポッドキャスト</span>
+                    <h3 class="font-bold text-brandnavy text-base">Radio Leader's</h3>
+                    <p class="text-xs text-mutedslate">2024年3月23日放送</p>
+                    <p class="text-xs text-darkslate pt-2 border-t border-warmborder">
+                        WEBマーケティング、AI活用、個人の才能を引き出す未来の創発について語る。
+                    </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-warmborder space-y-2">
+                    <span class="text-xs font-bold text-brandgold bg-brandgoldlight px-2 py-0.5 rounded">Webインタビュー</span>
+                    <h3 class="font-bold text-brandnavy text-base">THE HUMAN STORY</h3>
+                    <p class="text-xs text-mutedslate">The VISION 掲載</p>
+                    <p class="text-xs text-darkslate pt-2 border-t border-warmborder">
+                        大手メーカーからの独立経緯、「四方良し」の価値観、挫折を好転させる思考法。
+                    </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-warmborder space-y-2">
+                    <span class="text-xs font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded">Web企業ブランディング</span>
+                    <h3 class="font-bold text-brandnavy text-base">Japan Quality</h3>
+                    <p class="text-xs text-mutedslate">ブランディング・ラボ</p>
+                    <p class="text-xs text-darkslate pt-2 border-t border-warmborder">
+                        仕事へのこだわり、SDGs活動、若者へ向けたキャリア構築のエール。
+                    </p>
+                </div>
+
+                <div class="bg-white p-5 rounded-2xl border border-warmborder space-y-2">
+                    <span class="text-xs font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded">経営情報誌</span>
+                    <h3 class="font-bold text-brandnavy text-base">月刊マスターズ</h3>
+                    <p class="text-xs text-mutedslate">2020年5月号</p>
+                    <p class="text-xs text-darkslate pt-2 border-t border-warmborder">
+                        創業期からの軌跡、リカレント教育事業の展望と注目の成長企業として紹介。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Messages to Young Professionals -->
+            <div class="bg-brandnavy text-white p-6 sm:p-8 rounded-2xl space-y-4">
+                <h3 class="text-lg font-bold text-brandgold flex items-center space-x-2">
+                    <span>📣</span>
+                    <span>若者・次世代リーダーへのキャリア・メッセージ</span>
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
+                    <div class="space-y-2 bg-white/10 p-4 rounded-xl backdrop-blur">
+                        <p class="font-bold text-white text-base">1. 身分が固まる前の「挑戦と試行錯誤」</p>
+                        <p class="text-gray-200 leading-relaxed">
+                            結婚や昇進等で役割が固まる前の若いうちに、リスクを取って挑戦し、失敗と成功の経験を積むことが、将来の揺るぎない糧となります。
+                        </p>
+                    </div>
+                    <div class="space-y-2 bg-white/10 p-4 rounded-xl backdrop-blur">
+                        <p class="font-bold text-white text-base">2. AI時代における「自己才能の開花」</p>
+                        <p class="text-gray-200 leading-relaxed">
+                            AIテクノロジーが発展する今こそ、自分自身の独自の才能やスキルを磨き、それを用いて社会に価値貢献する力を育むことが不可欠です。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brandnavy text-white border-t border-warmborder mt-16 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 border-b border-gray-700 pb-6">
+                <div>
+                    <h2 class="text-xl font-bold text-white">株式会社MYfuture</h2>
+                    <p class="text-xs text-gray-300 mt-1">代表取締役：山口 将輝（Masaki Yamaguchi）</p>
+                    <p class="text-xs text-gray-400">所在地：東京都渋谷区恵比寿</p>
+                </div>
+                <div class="text-xs text-gray-300 space-y-1 sm:text-right">
+                    <p>事業内容：大人のリカレント教育研修 / Webマーケティング / 広告運用 / コンサルティング</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-400 text-center">
+                © 株式会社MYfuture. All Rights Reserved. 山口将輝 人物・事業理念リサーチ報告書に基づくポートフォリオサイト
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        // 四方良し Selector Logic
+        const pillarData = [
+            {
+                title: "お客様における「良し」",
+                desc: "書籍や既存メディアでは得られない、一流の有識者による実践的コンテンツを提供。コミュニケーション、資産運用、キャリア開発等、大人の学び直しを通じて個人の才能を開花させ、豊かな人生の選択肢を提供します。"
+            },
+            {
+                title: "ビジネスパートナーにおける「良し」",
+                desc: "著書や専門知識を持つトップ講師や協力会社の貴重なナレッジを、高度なWebマーケティング技術で最適な需要者へ提供。ブランド価値を高めつつ、正当なビジネス成果と対価を生み出すパートナーシップを構築します。"
+            },
+            {
+                title: "世間（社会・SDGs）における「良し」",
+                desc: "ペーパーレス化やリモートワークによる環境負荷低減、コロナ禍無償講座支援、国際NGOを通じた途上国の子ども支援や地域開発など、持続可能な社会作りに直接寄与します。"
+            },
+            {
+                title: "自分自身における「良し」",
+                desc: "自己犠牲の奉仕ではなく、経営者自身や自社スタッフも情熱を維持し、成長と適正な利益を得られる状態を確保。事業自体が持続可能（サステナブル）であるからこそ、長期的かつ高品質な社会貢献が可能となります。"
+            }
+        ];
+
+        function selectPillar(index) {
+            for (let i = 0; i < 4; i++) {
+                const card = document.getElementById(`pillar-card-${i}`);
+                if (i === index) {
+                    card.classList.add('border-2', 'border-brandblue');
+                    card.classList.remove('border-warmborder');
+                } else {
+                    card.classList.remove('border-2', 'border-brandblue');
+                    card.classList.add('border-warmborder');
+                }
+            }
+            document.getElementById('pillar-title').innerText = pillarData[index].title;
+            document.getElementById('pillar-desc').innerText = pillarData[index].desc;
+        }
+
+        // Business Tab Logic
+        const bizTabData = {
+            recurrent: `
+                <div class="space-y-2">
+                    <h4 class="font-bold text-brandnavy text-base">大人のリカレント教育（学び直し）研修事業</h4>
+                    <p class="text-xs sm:text-sm text-darkslate leading-relaxed">
+                        コミュニケーション、資産運用、キャリア開発など、変化の激しい現代社会で真に必要な実践スキルを提供。著書やメディア出演実績を持つ国内トップクラスの有識者と提携し、体系化された講座を届けています。
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 text-xs">
+                        <span class="bg-warmbg border border-warmborder px-2.5 py-1 rounded-md text-brandnavy font-medium">対象：自己研鑽を望むお客様・社会人</span>
+                        <span class="bg-warmbg border border-warmborder px-2.5 py-1 rounded-md text-brandnavy font-medium">特徴：トップ講師陣とのタイアップ</span>
+                    </div>
+                </div>
+            `,
+            marketing: `
+                <div class="space-y-2">
+                    <h4 class="font-bold text-brandnavy text-base">Webマーケティング・広告運用事業（AI & データ活用）</h4>
+                    <p class="text-xs sm:text-sm text-darkslate leading-relaxed">
+                        検索エンジン・SNS広告の運用からユーザー行動解析まで、AI技術とデータ分析を活用した集客プロセスを構築。知識を必要としている層へ的確に情報が届く高精度なアプローチを実現しています。
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 text-xs">
+                        <span class="bg-warmbg border border-warmborder px-2.5 py-1 rounded-md text-brandnavy font-medium">技術：AI集客データ最適化</span>
+                        <span class="bg-warmbg border border-warmborder px-2.5 py-1 rounded-md text-brandnavy font-medium">効果：潜在ニーズの高精度マッチング</span>
+                    </div>
+                </div>
+            `,
+            consulting: `
+                <div class="space-y-2">
+                    <h4 class="font-bold text-brandnavy text-base">プロモーション・事業最大化コンサルティング</h4>
+                    <p class="text-xs sm:text-sm text-darkslate leading-relaxed">
+                        「売れる商品設計」からコンセプト設計、集客・販売の実行までワンストップで伴走支援。ビジネスパートナーの強みを最大化し、共に事業拡大を推進する統合アドバイザリーを提供します。
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 text-xs">
+                        <span class="bg-warmbg border border-warmborder px-2.5 py-1 rounded-md text-brandnavy font-medium">範囲：コンセプト開発〜集客実行</span>
+                        <span class="bg-warmbg border border-warmborder px-2.5 py-1 rounded-md text-brandnavy font-medium">理念：四方良しに基づく価値最大化</span>
+                    </div>
+                </div>
+            `
+        };
+
+        function switchBizTab(key) {
+            const tabs = ['recurrent', 'marketing', 'consulting'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`biz-tab-${t}`);
+                if (t === key) {
+                    btn.className = "px-4 py-2 rounded-xl font-bold text-xs sm:text-sm bg-brandnavy text-white transition-all";
+                } else {
+                    btn.className = "px-4 py-2 rounded-xl font-bold text-xs sm:text-sm bg-warmbg text-mutedslate hover:bg-warmborder transition-all";
+                }
+            });
+            document.getElementById('biz-content-area').innerHTML = bizTabData[key];
+        }
+
+        // Initialize Views on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            switchBizTab('recurrent');
+        });
+    </script>
+</body>
+</html>
