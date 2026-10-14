@@ -11,18 +11,27 @@ GOLD  = "#C9A27E"
 WHITE = "#FFFFFF"
 CTA_URL = "https://example.com/apply"  # ←申込フォームURLに差し替え
 
+CMAP={INK:None,ROSE:"r",ROSE_D:"rd",GOLD:"g",WHITE:"w"}
+def _cls(align,color,weight=None):
+    c=[]
+    if align=="center": c.append("tc")
+    k=CMAP.get(color,"")
+    if k: c.append(k)
+    if weight: c.append("b")
+    return c
 def P(html, size=None, align="center", color=INK, weight=None):
-    st = f"text-align:{align};"
-    return f'<p style="{st}"><span style="color:{color};{"font-weight:%s;"%weight if weight else ""}">{html}</span></p>'
+    c=_cls(align,color,weight)
+    if color not in CMAP: html=f'<span style="color:{color};">{html}</span>'
+    return f'<p class="{" ".join(c)}">{html}</p>' if c else f'<p>{html}</p>'
 
 def lines(*ls, align="center", color=INK):
-    return "".join(f'<p style="text-align:{align};"><span style="color:{color};">{l}</span></p>' if l else '<p><br></p>' for l in ls)
+    return "".join(P(l,align=align,color=color) if l else '<p><br></p>' for l in ls)
 
 def mark(t):  # pink highlighter
-    return f'<span style="background:linear-gradient(transparent 60%,#F9D3DB 60%);font-weight:bold;">{t}</span>'
+    return f'<span class="mk">{t}</span>'
 
 def rose(t, b=True):
-    return f'<span style="color:{ROSE};{"font-weight:bold;" if b else ""}">{t}</span>'
+    return f'<span class="r b">{t}</span>'
 
 def text(content, fs=16, fsm=15, lh="2.0", pb=3, **kw):
     d = {"type":"text","content":content,"font_size":fs,"font_size_mobile":fsm,"line_height":lh,"padding_bottom":pb}
@@ -50,7 +59,9 @@ def label(en, ja):
         divider(),
     ]
 
-def cta(main="無料体験セミナーに申し込む", sub_t="＼ 未経験・女性・自分のためでもOK ／"):
+def cta(main="無料体験セミナーに申し込む", sub_t="＼ 未経験・女性・自分のためでもOK ／", light=False):
+    if light:
+        d=cta(main, sub_t); d.update(background_color=WHITE, background_color_to="#FFF4F1", color=ROSE, sub_color=ROSE); return d
     return {"type":"button","content":main,"sub_content":sub_t,"link_type":"url","link_url":CTA_URL,
             "link_target":"same","cv_tracking":1,"button_color":"btn-red-pill",
             "background_color":"#E7849A","background_color_to":"#F2AE9E","gradient_degree":"90",
@@ -106,8 +117,8 @@ E.append(section([
     ], bg=BLUSH, radius=24)]),
     row([col([
         spacer(30, 20),
-        {"type":"balloon","content":P("いつか起業したい", align="left"),"image_url":ph(200,200,"♡"),"image_position":"left","image_width":80,"image_width_mobile":60,"font_size":17,"font_size_mobile":15,"background_color":WHITE,"border_color":"#F2C4CD","border_width":1},
-        {"type":"balloon","content":P("自分の力で稼ぐ仕事を探している", align="left"),"image_url":ph(200,200,"♡"),"image_position":"right","image_width":80,"image_width_mobile":60,"font_size":17,"font_size_mobile":15,"background_color":WHITE,"border_color":"#F2C4CD","border_width":1},
+        {"type":"balloon","content":P("いつか起業したい", align="left"),"image_url":ph(200,200,"♡"),"image_position":"left","image_width":80,"image_width_mobile":60,"font_size":17,"font_size_mobile":15,"background_color":WHITE},
+        {"type":"balloon","content":P("自分の力で稼ぐ仕事を探している", align="left"),"image_url":ph(200,200,"♡"),"image_position":"right","image_width":80,"image_width_mobile":60,"font_size":17,"font_size_mobile":15,"background_color":WHITE},
         spacer(10),
         text(lines(f"そんなあなたに{rose('朗報')}です。", "", "時間や場所に縛られず、", "自由に働ける職業、", f"{mark('コピーライター')}になってみませんか？"), fs=18, fsm=16),
         spacer(20),
@@ -350,7 +361,7 @@ E.append(section([
         text(P("＼ 本当にあなたもライターになれるのか？ ／", color=WHITE), fs=16, fsm=13, pb=1),
         head(P("AI感情ライター養成講座<br>１DAY体験セミナー", color=WHITE), fs=34, fsm=24),
         text(P("体験セミナーで、力試ししてみませんか？", color=WHITE), fs=17, fsm=15, pb=5),
-        cta("今すぐ体験セミナーに申し込む", "＼ 未経験・女性・自分のためでもOK ／"),
+        cta("今すぐ体験セミナーに申し込む", "＼ 未経験・女性・自分のためでもOK ／", light=True),
         spacer(70,50),
     ])]),
 ], bg="#E7849A", bg_to="#F2B8A8", deg="135", name="最終CTA"))
@@ -369,5 +380,32 @@ out = {
     },
     "elements": E,
 }
+REPL=[
+ ('<p style="text-align:center;">','<p class="tc">'),
+ (f'<span style="color:{WHITE};font-size:36px;font-weight:bold;">','<span class="w b f36">'),
+ (f'<span style="color:{WHITE};font-size:32px;font-weight:bold;">','<span class="w b f32">'),
+ (f'<span style="color:{WHITE};font-size:26px;font-weight:bold;">','<span class="w b f26">'),
+ (f'<span style="color:{ROSE};font-size:26px;font-weight:bold;">','<span class="r b f26">'),
+ (f'<span style="color:{WHITE};background-color:{ROSE};border-radius:999px;padding:6px 16px;font-weight:bold;">','<span class="badge">'),
+ (f'<span style="color:{WHITE};background-color:{ROSE};padding:6px 16px;font-weight:bold;">','<span class="badge">'),
+ (f'<span style="color:{WHITE};">','<span class="w">'),
+ (f'<span style="color:{INK};">','<span>'),
+ (f'<span style="color:{GOLD};letter-spacing:0.25em;">','<span class="g ls">'),
+ (f'<span style="color:{ROSE_D};">','<span class="rd">'),
+]
+def comp(o):
+    if isinstance(o,dict): return {k:comp(v) for k,v in o.items()}
+    if isinstance(o,list): return [comp(v) for v in o]
+    if isinstance(o,str):
+        for a,b in REPL: o=o.replace(a,b)
+    return o
+out["elements"]=comp(out["elements"])
+out["page_settings"]["css"] += """
+.tc{text-align:center}.b{font-weight:bold}.r{color:#D46A82}.rd{color:#B8506A}.g{color:#C9A27E}.w{color:#fff}.ls{letter-spacing:.25em}
+.f26{font-size:26px}.f32{font-size:32px}.f36{font-size:36px}
+.mk{background:linear-gradient(transparent 60%,#F9D3DB 60%);font-weight:bold}
+.badge{color:#fff;background:#D46A82;border-radius:999px;padding:6px 16px;font-weight:bold;white-space:nowrap}
+p{color:#5B4A50}
+@media(max-width:600px){.f36{font-size:28px}.f32{font-size:24px}.f26{font-size:22px}}"""
 json.dump(out, open(sys.argv[1], "w"), ensure_ascii=False, indent=2)
 print("sections:", len(E))
