@@ -2,12 +2,12 @@ import json, sys
 from urllib.parse import quote
 
 # ===== Palette (feminine: blush pink / rose / champagne gold) =====
-INK   = "#5B4A50"   # body text (warm mocha)
-ROSE  = "#D46A82"   # main accent
-ROSE_D= "#B8506A"
-BLUSH = "#FBE9EC"
-CREAM = "#FFF9F6"
-GOLD  = "#C9A27E"
+INK   = "#2F3A45"   # body text (charcoal navy)
+ROSE  = "#2E5A73"   # main accent (deep steel blue)
+ROSE_D= "#1F3A52"
+BLUSH = "#E7EDF0"
+CREAM = "#F5F2EC"
+GOLD  = "#A8834F"
 WHITE = "#FFFFFF"
 CTA_URL = "https://example.com/apply"  # ←申込フォームURLに差し替え
 
@@ -61,10 +61,10 @@ def label(en, ja):
 
 def cta(main="無料体験セミナーに申し込む", sub_t="＼ 未経験・女性・自分のためでもOK ／", light=False):
     if light:
-        d=cta(main, sub_t); d.update(background_color=WHITE, background_color_to="#FFF4F1", color=ROSE, sub_color=ROSE); return d
+        d=cta(main, sub_t); d.update(background_color=WHITE, background_color_to="#F3F6F7", color=ROSE, sub_color=ROSE); return d
     return {"type":"button","content":main,"sub_content":sub_t,"link_type":"url","link_url":CTA_URL,
             "link_target":"same","cv_tracking":1,"button_color":"btn-red-pill",
-            "background_color":"#E7849A","background_color_to":"#F2AE9E","gradient_degree":"90",
+            "background_color":"#2E5A73","background_color_to":"#4F7F91","gradient_degree":"90",
             "color":WHITE,"sub_color":WHITE,"font_size":22,"font_size_mobile":18,"sub_font_size":13,"sub_font_size_mobile":12,
             "icon_right":"fas fa-chevron-right","animation":"scale","width":90,"padding_y":20,"align":"center","padding_bottom":2}
 
@@ -85,7 +85,7 @@ def card(children, bg=WHITE, border=None, radius=20, ps=6, pt=6, pb=5, w=12):
     if border: kw.update(border_width=1, border_color=border, border_style="solid")
     return col(children, w=w, **kw)
 
-def ph(w, h, t, bg="F4D6DB", fg="B8506A"):
+def ph(w, h, t, bg="D6E0E6", fg="1F3A52"):
     return f"https://placehold.jp/24/{bg}/{fg}/{w}x{h}.png?text={quote(t)}"
 
 E = []
@@ -103,7 +103,7 @@ E.append(section([
         cta(),
         spacer(30, 20),
     ])], width=760)
-], bg="#FCE4E8", bg_to=CREAM, name="ファーストビュー"))
+], bg="#D8E3E9", bg_to=CREAM, name="ファーストビュー"))
 
 # ---------- 2. 問いかけ ----------
 E.append(section([
@@ -142,7 +142,7 @@ E.append(section([
         text(lines("簡単に言えば、", "会社が世の中に出す文章について、"), fs=16, fsm=15, pb=1),
         {"type":"bullet","content":"<ul><li>文法は正しいか。</li><li>言葉遣いは適切か。</li><li>会社らしいトーンになっているか。</li><li>文章はわかりやすいか。</li><li>そして、余計なコンマが一つ残っていないか。</li></ul>","check_style":"check-fa-check","check_color":ROSE,"font_size":16,"font_size_mobile":15,"item_spacing":8,"padding_side":4},
         text(lines("そこまで人間の目でチェックし、", f"{mark('文章の品質を守る仕事')}です。"), fs=16, fsm=15),
-    ], bg=WHITE, border="#F2C4CD", radius=24)]),
+    ], bg=WHITE, border="#C5D3DB", radius=24)]),
     row([col([spacer(30,20),
         text(lines("では、この仕事に", f"Anthropicは{rose('いくら払おうとしていたのか？')}"), fs=19, fsm=17),
     ])]),
@@ -150,7 +150,7 @@ E.append(section([
         text(P("提示された給与レンジ", color=WHITE), fs=15, fsm=14, pb=0),
         head(f'<p style="text-align:center;"><span style="color:{WHITE};">年俸 26万5,000～29万5,000ドル</span></p>', fs=26, fsm=19),
         text(f'<p style="text-align:center;"><span style="color:{WHITE};">日本円にすれば…</span><br><span style="color:{WHITE};font-size:36px;font-weight:bold;">約4,000万円</span><span style="color:{WHITE};">クラス</span></p>', fs=16, fsm=15, lh="1.6"),
-        text(P("※為替によって変動します", color="#FFE9EE"), fs=12, fsm=11, pb=0),
+        text(P("※為替によって変動します", color="#D3E0E8"), fs=12, fsm=11, pb=0),
     ], bg=ROSE, radius=24, pt=5, pb=4)]),
     row([col([spacer(30,20),
         text(lines("AIが世界中の文章を書き始めようとしている時代に、", "そのAIを作っている会社が、", f"人間の{mark('「文章を見る力」')}に、", "これだけのお金を払おうとしている。", "", f"{rose('しかも、これだけではありません。')}", "", "Anthropicは、コピーやコンテンツ全体を率いる", "「Head of Copy」というポジションも募集しました。"), fs=16, fsm=15),
@@ -177,7 +177,7 @@ E.append(section([
     ])]),
     row([card([
         {"type":"bullet","content":"<ul><li>その女性が夜、一人になったとき、どんなことに不安を感じているのか？</li><li>会社を辞めたいと思いながら、なぜ辞められないのか？</li><li>「起業したい」という言葉の裏側に、どんな期待と恐怖があるのか？</li><li>どんな一言を読んだ瞬間、「これ、私のことだ……」と思うのか？</li><li>どんな言葉なら、その人の背中をそっと押せるのか？</li></ul>","check_style":"check-fa-check","check_color":ROSE,"font_size":16,"font_size_mobile":15,"line_height":"1.8","item_spacing":14},
-    ], bg=WHITE, border="#F2C4CD", radius=24, pt=5, pb=3)]),
+    ], bg=WHITE, border="#C5D3DB", radius=24, pt=5, pb=3)]),
     row([col([spacer(30,20),
         text(lines("そこには、", f"{mark('人間を理解する力')}が必要になります。", "", "つまり、これから価値がなくなるのは、", f"{rose('「ただ文章を量産するだけの人」')}です。", "", "しかし、AIを使いこなしながら──"), fs=17, fsm=15),
     ])]),
@@ -202,7 +202,7 @@ E.append(section([
     ])]),
     row([card([
         text(lines("早いうちにこのスキルを身につけておけば、", "これから来るであろう", f"{rose('ライター募集の絶頂期')}には、", f"{mark('実績を積んだ状態でエントリーできる')}", "ということです。"), fs=18, fsm=16, lh="1.9", pb=1),
-    ], bg=CREAM, border="#EAD7C3", radius=24)]),
+    ], bg=CREAM, border="#DDD2BF", radius=24)]),
     row([col([spacer(60,40)])]),
 ], bg=WHITE, name="日本にも波が来る"))
 
@@ -231,7 +231,7 @@ E.append(section([
 
 # ---------- 7. PC一台 ----------
 def place(icon, t):
-    return card([text(f'<p style="text-align:center;"><span style="font-size:34px;">{icon}</span><br><span style="color:{ROSE_D};font-weight:bold;">{t}</span></p>', fs=16, fsm=14, lh="1.6", pb=0)], w=4, radius=20, ps=1, pt=4, pb=3, border="#F2C4CD")
+    return card([text(f'<p style="text-align:center;"><span style="font-size:34px;">{icon}</span><br><span style="color:{ROSE_D};font-weight:bold;">{t}</span></p>', fs=16, fsm=14, lh="1.6", pb=0)], w=4, radius=20, ps=1, pt=4, pb=3, border="#C5D3DB")
 E.append(section([
     row([col([spacer(60,40), *label("MERIT 02", "パソコン一台で、場所を選ばない"),
         text(lines("必要なのは、基本的にパソコン一台。", "", "お店を借りる必要もない。", "在庫を抱える必要もない。", "高額な設備もいらない。"), fs=17, fsm=15),
@@ -243,13 +243,13 @@ E.append(section([
     row([card([
         {"type":"bullet","content":"<ul><li>リサーチを手伝ってもらう</li><li>アイデアを出してもらう</li><li>構成を考えてもらう</li><li>文章のたたき台を作ってもらう</li></ul>","check_style":"check-fa-check","check_color":GOLD,"font_size":16,"font_size_mobile":15,"item_spacing":8},
         text(lines("それを人間が、", f"{mark('「人を動かす文章」')}に仕上げる。"), fs=17, fsm=15, pb=1),
-    ], bg=CREAM, border="#EAD7C3", radius=24, pt=5, pb=4)]),
+    ], bg=CREAM, border="#DDD2BF", radius=24, pt=5, pb=4)]),
     row([col([spacer(30,20),
         text(lines("この働き方なら、", "「会社員だから時間がない」という人でも、", f"{rose('平日の夜や休日などのスキマ時間')}から", "始めることができます。", "", "最初から会社を辞めなくていい。", "まずは会社員を続けながら──"), fs=16, fsm=15),
     ])]),
     row([
-        card([text(f'<p style="text-align:center;"><span style="color:{INK};">STEP 1</span><br><span style="color:{ROSE};font-size:26px;font-weight:bold;">月3万円</span></p>', fs=13, fsm=12, lh="1.5", pb=0)], w=4, bg="#FDF0F2", radius=16, ps=1, pt=3, pb=3),
-        card([text(f'<p style="text-align:center;"><span style="color:{INK};">STEP 2</span><br><span style="color:{ROSE};font-size:26px;font-weight:bold;">月5万円</span></p>', fs=13, fsm=12, lh="1.5", pb=0)], w=4, bg="#FAE0E5", radius=16, ps=1, pt=3, pb=3),
+        card([text(f'<p style="text-align:center;"><span style="color:{INK};">STEP 1</span><br><span style="color:{ROSE};font-size:26px;font-weight:bold;">月3万円</span></p>', fs=13, fsm=12, lh="1.5", pb=0)], w=4, bg="#EDF2F4", radius=16, ps=1, pt=3, pb=3),
+        card([text(f'<p style="text-align:center;"><span style="color:{INK};">STEP 2</span><br><span style="color:{ROSE};font-size:26px;font-weight:bold;">月5万円</span></p>', fs=13, fsm=12, lh="1.5", pb=0)], w=4, bg="#D9E3E9", radius=16, ps=1, pt=3, pb=3),
         card([text(f'<p style="text-align:center;"><span style="color:{WHITE};">STEP 3</span><br><span style="color:{WHITE};font-size:26px;font-weight:bold;">月10万円</span></p>', fs=13, fsm=12, lh="1.5", pb=0)], w=4, bg=ROSE, radius=16, ps=1, pt=3, pb=3),
     ], column_gap=10, column_gap_mobile=6),
     row([col([spacer(20),
@@ -264,7 +264,7 @@ E.append(section([
         text(lines("すると、"), fs=16, fsm=15, pb=1),
     ])]),
     row([card([
-        text(P("「会社を辞めたら、生きていけない」", color="#8A7A80"), fs=18, fsm=15, pb=1),
+        text(P("「会社を辞めたら、生きていけない」", color="#6B7680"), fs=18, fsm=15, pb=1),
         text(P("という恐怖が、少しずつ…", color=INK), fs=15, fsm=14, pb=1),
         text(P("▼", color=ROSE), fs=20, fsm=18, pb=1, lh="1.2"),
         text(P(f"「もしかしたら私、<br>自分の力でも生きていけるかもしれない」", color=ROSE_D, weight="bold"), fs=21, fsm=17, lh="1.7", pb=1),
@@ -276,7 +276,7 @@ E.append(section([
         text(lines("です。", "", "そのノウハウを、あなたにお伝えしようと思います。"), fs=17, fsm=15),
         spacer(60,40),
     ])]),
-], bg="#FCE4E8", bg_to=CREAM, name="恐怖が自信に"))
+], bg="#D8E3E9", bg_to=CREAM, name="恐怖が自信に"))
 
 # ---------- 9. スワイプファイル ----------
 E.append(section([
@@ -324,7 +324,7 @@ E.append(section([
     row([col([spacer(60,40), *label("SEMINAR CONTENTS", "体験セミナーの内容")])]),
     row([card([
         {"type":"bullet","content":"<ul>"+"".join(f"<li>{i}</li>" for i in items)+"</ul>","check_style":"check-fa-check","check_color":ROSE,"font_size":16,"font_size_mobile":15,"line_height":"1.8","item_spacing":18},
-    ], bg=WHITE, border="#F2C4CD", radius=24, pt=6, pb=4)]),
+    ], bg=WHITE, border="#C5D3DB", radius=24, pt=6, pb=4)]),
     row([col([spacer(40,30), cta(), spacer(60,40)])]),
 ], bg=CREAM, name="セミナー内容"))
 
@@ -364,9 +364,9 @@ E.append(section([
         cta("今すぐ体験セミナーに申し込む", "＼ 未経験・女性・自分のためでもOK ／", light=True),
         spacer(70,50),
     ])]),
-], bg="#E7849A", bg_to="#F2B8A8", deg="135", name="最終CTA"))
+], bg="#1F3A52", bg_to="#3E6A80", deg="135", name="最終CTA"))
 
-E.append(section([row([col([text(P("© 株式会社オン・プレーン All Rights Reserved.", color="#9C8A90"), fs=12, fsm=11, pb=2, padding_top=4)])])], bg=WHITE, name="フッター"))
+E.append(section([row([col([text(P("© 株式会社オン・プレーン All Rights Reserved.", color="#8A939B"), fs=12, fsm=11, pb=2, padding_top=4)])])], bg=WHITE, name="フッター"))
 
 out = {
     "page_settings": {
@@ -401,11 +401,11 @@ def comp(o):
     return o
 out["elements"]=comp(out["elements"])
 out["page_settings"]["css"] += """
-.tc{text-align:center}.b{font-weight:bold}.r{color:#D46A82}.rd{color:#B8506A}.g{color:#C9A27E}.w{color:#fff}.ls{letter-spacing:.25em}
+.tc{text-align:center}.b{font-weight:bold}.r{color:#2E5A73}.rd{color:#1F3A52}.g{color:#A8834F}.w{color:#fff}.ls{letter-spacing:.25em}
 .f26{font-size:26px}.f32{font-size:32px}.f36{font-size:36px}
-.mk{background:linear-gradient(transparent 60%,#F9D3DB 60%);font-weight:bold}
-.badge{color:#fff;background:#D46A82;border-radius:999px;padding:6px 16px;font-weight:bold;white-space:nowrap}
-p{color:#5B4A50}
+.mk{background:linear-gradient(transparent 60%,#D3E0E8 60%);font-weight:bold}
+.badge{color:#fff;background:#2E5A73;border-radius:999px;padding:6px 16px;font-weight:bold;white-space:nowrap}
+p{color:#2F3A45}
 @media(max-width:600px){.f36{font-size:28px}.f32{font-size:24px}.f26{font-size:22px}}"""
 json.dump(out, open(sys.argv[1], "w"), ensure_ascii=False, indent=2)
 print("sections:", len(E))

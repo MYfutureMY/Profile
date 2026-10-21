@@ -3,15 +3,15 @@
     "title": "AI感情ライター養成講座 1DAY体験セミナーLP",
     "page_title": "AI感情ライター養成講座｜1DAY体験セミナー",
     "pc_width": 100,
-    "background_color": "#FFF9F6",
-    "css": "@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');\nbody, p, h1, h2, h3, .btn { font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif !important; letter-spacing: 0.04em; }\n.tc{text-align:center}.b{font-weight:bold}.r{color:#D46A82}.rd{color:#B8506A}.g{color:#C9A27E}.w{color:#fff}.ls{letter-spacing:.25em}\n.f26{font-size:26px}.f32{font-size:32px}.f36{font-size:36px}\n.mk{background:linear-gradient(transparent 60%,#F9D3DB 60%);font-weight:bold}\n.badge{color:#fff;background:#D46A82;border-radius:999px;padding:6px 16px;font-weight:bold;white-space:nowrap}\np{color:#5B4A50}\n@media(max-width:600px){.f36{font-size:28px}.f32{font-size:24px}.f26{font-size:22px}}",
+    "background_color": "#F5F2EC",
+    "css": "@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');\nbody, p, h1, h2, h3, .btn { font-family: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', sans-serif !important; letter-spacing: 0.04em; }\n.tc{text-align:center}.b{font-weight:bold}.r{color:#2E5A73}.rd{color:#1F3A52}.g{color:#A8834F}.w{color:#fff}.ls{letter-spacing:.25em}\n.f26{font-size:26px}.f32{font-size:32px}.f36{font-size:36px}\n.mk{background:linear-gradient(transparent 60%,#D3E0E8 60%);font-weight:bold}\n.badge{color:#fff;background:#2E5A73;border-radius:999px;padding:6px 16px;font-weight:bold;white-space:nowrap}\np{color:#2F3A45}\n@media(max-width:600px){.f36{font-size:28px}.f32{font-size:24px}.f26{font-size:22px}}",
     "meta_title": "AI感情ライター養成講座 1DAY体験セミナー",
     "meta_description": "未経験OK！女性OK！たった7つのテンプレートで集客ページを完成させる、AIを活用したコピーライターの体験セミナー。"
   },
   "elements": [
     {
       "type": "section",
-      "background_color": "#FCE4E8",
+      "background_color": "#D8E3E9",
       "margin_bottom": 0,
       "children": [
         {
@@ -67,7 +67,7 @@
                 },
                 {
                   "type": "text",
-                  "content": "<p class=\"tc\"><span style=\"color:#FFFFFF;background-color:#C9A27E;padding:8px 28px;font-weight:bold;letter-spacing:0.15em;\">１DAY 体験セミナー</span></p>",
+                  "content": "<p class=\"tc\"><span style=\"color:#FFFFFF;background-color:#A8834F;padding:8px 28px;font-weight:bold;letter-spacing:0.15em;\">１DAY 体験セミナー</span></p>",
                   "font_size": 22,
                   "font_size_mobile": 18,
                   "line_height": "2.4",
@@ -82,8 +82,8 @@
                   "link_target": "same",
                   "cv_tracking": 1,
                   "button_color": "btn-red-pill",
-                  "background_color": "#E7849A",
-                  "background_color_to": "#F2AE9E",
+                  "background_color": "#2E5A73",
+                  "background_color_to": "#4F7F91",
                   "gradient_degree": "90",
                   "color": "#FFFFFF",
                   "sub_color": "#FFFFFF",
@@ -108,13 +108,13 @@
           ]
         }
       ],
-      "background_color_to": "#FFF9F6",
+      "background_color_to": "#F5F2EC",
       "gradient_degree": "180",
       "element_name": "ファーストビュー"
     },
     {
       "type": "section",
-      "background_color": "#FFF9F6",
+      "background_color": "#F5F2EC",
       "margin_bottom": 0,
       "children": [
         {
@@ -166,7 +166,7 @@
                   "padding_bottom": 3
                 }
               ],
-              "background_color": "#FBE9EC",
+              "background_color": "#E7EDF0",
               "border_radius": 24,
               "padding_side": 6,
               "padding_top": 6,
@@ -190,7 +190,7 @@
                 {
                   "type": "balloon",
                   "content": "<p>いつか起業したい</p>",
-                  "image_url": "https://placehold.jp/24/F4D6DB/B8506A/200x200.png?text=%E2%99%A1",
+                  "image_url": "https://placehold.jp/24/D6E0E6/1F3A52/200x200.png?text=%E2%99%A1",
                   "image_position": "left",
                   "image_width": 80,
                   "image_width_mobile": 60,
@@ -201,7 +201,7 @@
                 {
                   "type": "balloon",
                   "content": "<p>自分の力で稼ぐ仕事を探している</p>",
-                  "image_url": "https://placehold.jp/24/F4D6DB/B8506A/200x200.png?text=%E2%99%A1",
+                  "image_url": "https://placehold.jp/24/D6E0E6/1F3A52/200x200.png?text=%E2%99%A1",
                   "image_position": "right",
                   "image_width": 80,
                   "image_width_mobile": 60,
@@ -290,7 +290,7 @@
                 },
                 {
                   "type": "divider",
-                  "border_color": "#C9A27E",
+                  "border_color": "#A8834F",
                   "border_width": 1,
                   "width": 60,
                   "padding_top": 2,
@@ -361,7 +361,7 @@
                   "type": "bullet",
                   "content": "<ul><li>文法は正しいか。</li><li>言葉遣いは適切か。</li><li>会社らしいトーンになっているか。</li><li>文章はわかりやすいか。</li><li>そして、余計なコンマが一つ残っていないか。</li></ul>",
                   "check_style": "check-fa-check",
-                  "check_color": "#D46A82",
+                  "check_color": "#2E5A73",
                   "font_size": 16,
                   "font_size_mobile": 15,
                   "item_spacing": 8,
@@ -382,7 +382,7 @@
               "padding_top": 6,
               "padding_bottom": 5,
               "border_width": 1,
-              "border_color": "#F2C4CD",
+              "border_color": "#C5D3DB",
               "border_style": "solid"
             }
           ]
@@ -445,14 +445,14 @@
                 },
                 {
                   "type": "text",
-                  "content": "<p class=\"tc\"><span style=\"color:#FFE9EE;\">※為替によって変動します</span></p>",
+                  "content": "<p class=\"tc\"><span style=\"color:#D3E0E8;\">※為替によって変動します</span></p>",
                   "font_size": 12,
                   "font_size_mobile": 11,
                   "line_height": "2.0",
                   "padding_bottom": 0
                 }
               ],
-              "background_color": "#D46A82",
+              "background_color": "#2E5A73",
               "border_radius": 24,
               "padding_side": 6,
               "padding_top": 5,
@@ -517,7 +517,7 @@
                   "padding_bottom": 1
                 }
               ],
-              "background_color": "#C9A27E",
+              "background_color": "#A8834F",
               "border_radius": 24,
               "padding_side": 6,
               "padding_top": 5,
@@ -547,7 +547,7 @@
     },
     {
       "type": "section",
-      "background_color": "#FBE9EC",
+      "background_color": "#E7EDF0",
       "margin_bottom": 0,
       "children": [
         {
@@ -580,7 +580,7 @@
                 },
                 {
                   "type": "divider",
-                  "border_color": "#C9A27E",
+                  "border_color": "#A8834F",
                   "border_width": 1,
                   "width": 60,
                   "padding_top": 2,
@@ -668,7 +668,7 @@
                   "type": "bullet",
                   "content": "<ul><li>その女性が夜、一人になったとき、どんなことに不安を感じているのか？</li><li>会社を辞めたいと思いながら、なぜ辞められないのか？</li><li>「起業したい」という言葉の裏側に、どんな期待と恐怖があるのか？</li><li>どんな一言を読んだ瞬間、「これ、私のことだ……」と思うのか？</li><li>どんな言葉なら、その人の背中をそっと押せるのか？</li></ul>",
                   "check_style": "check-fa-check",
-                  "check_color": "#D46A82",
+                  "check_color": "#2E5A73",
                   "font_size": 16,
                   "font_size_mobile": 15,
                   "line_height": "1.8",
@@ -681,7 +681,7 @@
               "padding_top": 5,
               "padding_bottom": 3,
               "border_width": 1,
-              "border_color": "#F2C4CD",
+              "border_color": "#C5D3DB",
               "border_style": "solid"
             }
           ]
@@ -879,7 +879,7 @@
                 },
                 {
                   "type": "divider",
-                  "border_color": "#C9A27E",
+                  "border_color": "#A8834F",
                   "border_width": 1,
                   "width": 60,
                   "padding_top": 2,
@@ -914,13 +914,13 @@
                   "padding_bottom": 1
                 }
               ],
-              "background_color": "#FFF9F6",
+              "background_color": "#F5F2EC",
               "border_radius": 24,
               "padding_side": 6,
               "padding_top": 6,
               "padding_bottom": 5,
               "border_width": 1,
-              "border_color": "#EAD7C3",
+              "border_color": "#DDD2BF",
               "border_style": "solid"
             }
           ]
@@ -947,7 +947,7 @@
     },
     {
       "type": "section",
-      "background_color": "#FBE9EC",
+      "background_color": "#E7EDF0",
       "margin_bottom": 0,
       "children": [
         {
@@ -980,7 +980,7 @@
                 },
                 {
                   "type": "divider",
-                  "border_color": "#C9A27E",
+                  "border_color": "#A8834F",
                   "border_width": 1,
                   "width": 60,
                   "padding_top": 2,
@@ -1197,7 +1197,7 @@
                 {
                   "type": "balloon",
                   "content": "<p>これはいい</p>",
-                  "image_url": "https://placehold.jp/24/F4D6DB/B8506A/200x200.png?text=%E2%9C%93",
+                  "image_url": "https://placehold.jp/24/D6E0E6/1F3A52/200x200.png?text=%E2%9C%93",
                   "image_position": "left",
                   "image_width": 60,
                   "image_width_mobile": 50,
@@ -1207,7 +1207,7 @@
                 {
                   "type": "balloon",
                   "content": "<p>これは伝わらない</p>",
-                  "image_url": "https://placehold.jp/24/F4D6DB/B8506A/200x200.png?text=%E2%9C%93",
+                  "image_url": "https://placehold.jp/24/D6E0E6/1F3A52/200x200.png?text=%E2%9C%93",
                   "image_position": "right",
                   "image_width": 60,
                   "image_width_mobile": 50,
@@ -1217,7 +1217,7 @@
                 {
                   "type": "balloon",
                   "content": "<p>もっとこうしたほうが人は動く</p>",
-                  "image_url": "https://placehold.jp/24/F4D6DB/B8506A/200x200.png?text=%E2%9C%93",
+                  "image_url": "https://placehold.jp/24/D6E0E6/1F3A52/200x200.png?text=%E2%9C%93",
                   "image_position": "left",
                   "image_width": 60,
                   "image_width_mobile": 50,
@@ -1316,7 +1316,7 @@
                 },
                 {
                   "type": "divider",
-                  "border_color": "#C9A27E",
+                  "border_color": "#A8834F",
                   "border_width": 1,
                   "width": 60,
                   "padding_top": 2,
@@ -1344,7 +1344,7 @@
               "children": [
                 {
                   "type": "text",
-                  "content": "<p class=\"tc\"><span style=\"font-size:34px;\">🏠</span><br><span style=\"color:#B8506A;font-weight:bold;\">自宅でもいい</span></p>",
+                  "content": "<p class=\"tc\"><span style=\"font-size:34px;\">🏠</span><br><span style=\"color:#1F3A52;font-weight:bold;\">自宅でもいい</span></p>",
                   "font_size": 16,
                   "font_size_mobile": 14,
                   "line_height": "1.6",
@@ -1357,7 +1357,7 @@
               "padding_top": 4,
               "padding_bottom": 3,
               "border_width": 1,
-              "border_color": "#F2C4CD",
+              "border_color": "#C5D3DB",
               "border_style": "solid"
             },
             {
@@ -1366,7 +1366,7 @@
               "children": [
                 {
                   "type": "text",
-                  "content": "<p class=\"tc\"><span style=\"font-size:34px;\">☕</span><br><span style=\"color:#B8506A;font-weight:bold;\">カフェでもいい</span></p>",
+                  "content": "<p class=\"tc\"><span style=\"font-size:34px;\">☕</span><br><span style=\"color:#1F3A52;font-weight:bold;\">カフェでもいい</span></p>",
                   "font_size": 16,
                   "font_size_mobile": 14,
                   "line_height": "1.6",
@@ -1379,7 +1379,7 @@
               "padding_top": 4,
               "padding_bottom": 3,
               "border_width": 1,
-              "border_color": "#F2C4CD",
+              "border_color": "#C5D3DB",
               "border_style": "solid"
             },
             {
@@ -1388,7 +1388,7 @@
               "children": [
                 {
                   "type": "text",
-                  "content": "<p class=\"tc\"><span style=\"font-size:34px;\">✈</span><br><span style=\"color:#B8506A;font-weight:bold;\">旅先でもいい</span></p>",
+                  "content": "<p class=\"tc\"><span style=\"font-size:34px;\">✈</span><br><span style=\"color:#1F3A52;font-weight:bold;\">旅先でもいい</span></p>",
                   "font_size": 16,
                   "font_size_mobile": 14,
                   "line_height": "1.6",
@@ -1401,7 +1401,7 @@
               "padding_top": 4,
               "padding_bottom": 3,
               "border_width": 1,
-              "border_color": "#F2C4CD",
+              "border_color": "#C5D3DB",
               "border_style": "solid"
             }
           ],
@@ -1445,7 +1445,7 @@
                   "type": "bullet",
                   "content": "<ul><li>リサーチを手伝ってもらう</li><li>アイデアを出してもらう</li><li>構成を考えてもらう</li><li>文章のたたき台を作ってもらう</li></ul>",
                   "check_style": "check-fa-check",
-                  "check_color": "#C9A27E",
+                  "check_color": "#A8834F",
                   "font_size": 16,
                   "font_size_mobile": 15,
                   "item_spacing": 8
@@ -1459,13 +1459,13 @@
                   "padding_bottom": 1
                 }
               ],
-              "background_color": "#FFF9F6",
+              "background_color": "#F5F2EC",
               "border_radius": 24,
               "padding_side": 6,
               "padding_top": 5,
               "padding_bottom": 4,
               "border_width": 1,
-              "border_color": "#EAD7C3",
+              "border_color": "#DDD2BF",
               "border_style": "solid"
             }
           ]
@@ -1512,7 +1512,7 @@
                   "padding_bottom": 0
                 }
               ],
-              "background_color": "#FDF0F2",
+              "background_color": "#EDF2F4",
               "border_radius": 16,
               "padding_side": 1,
               "padding_top": 3,
@@ -1531,7 +1531,7 @@
                   "padding_bottom": 0
                 }
               ],
-              "background_color": "#FAE0E5",
+              "background_color": "#D9E3E9",
               "border_radius": 16,
               "padding_side": 1,
               "padding_top": 3,
@@ -1550,7 +1550,7 @@
                   "padding_bottom": 0
                 }
               ],
-              "background_color": "#D46A82",
+              "background_color": "#2E5A73",
               "border_radius": 16,
               "padding_side": 1,
               "padding_top": 3,
@@ -1595,7 +1595,7 @@
     },
     {
       "type": "section",
-      "background_color": "#FCE4E8",
+      "background_color": "#D8E3E9",
       "margin_bottom": 0,
       "children": [
         {
@@ -1633,7 +1633,7 @@
               "children": [
                 {
                   "type": "text",
-                  "content": "<p class=\"tc\"><span style=\"color:#8A7A80;\">「会社を辞めたら、生きていけない」</span></p>",
+                  "content": "<p class=\"tc\"><span style=\"color:#6B7680;\">「会社を辞めたら、生きていけない」</span></p>",
                   "font_size": 18,
                   "font_size_mobile": 15,
                   "line_height": "2.0",
@@ -1726,7 +1726,7 @@
           ]
         }
       ],
-      "background_color_to": "#FFF9F6",
+      "background_color_to": "#F5F2EC",
       "gradient_degree": "180",
       "element_name": "恐怖が自信に"
     },
@@ -1765,7 +1765,7 @@
                 },
                 {
                   "type": "divider",
-                  "border_color": "#C9A27E",
+                  "border_color": "#A8834F",
                   "border_width": 1,
                   "width": 60,
                   "padding_top": 2,
@@ -1808,7 +1808,7 @@
                   "padding_bottom": 1
                 }
               ],
-              "background_color": "#FBE9EC",
+              "background_color": "#E7EDF0",
               "border_radius": 24,
               "padding_side": 6,
               "padding_top": 5,
@@ -1879,7 +1879,7 @@
               "padding_top": 5,
               "padding_bottom": 3,
               "border_width": 1,
-              "border_color": "#C9A27E",
+              "border_color": "#A8834F",
               "border_style": "solid"
             }
           ]
@@ -1906,7 +1906,7 @@
     },
     {
       "type": "section",
-      "background_color": "#FBE9EC",
+      "background_color": "#E7EDF0",
       "margin_bottom": 0,
       "children": [
         {
@@ -1931,7 +1931,7 @@
                 },
                 {
                   "type": "divider",
-                  "border_color": "#C9A27E",
+                  "border_color": "#A8834F",
                   "border_width": 1,
                   "width": 60,
                   "padding_top": 2,
@@ -1959,8 +1959,8 @@
                   "link_target": "same",
                   "cv_tracking": 1,
                   "button_color": "btn-red-pill",
-                  "background_color": "#E7849A",
-                  "background_color_to": "#F2AE9E",
+                  "background_color": "#2E5A73",
+                  "background_color_to": "#4F7F91",
                   "gradient_degree": "90",
                   "color": "#FFFFFF",
                   "sub_color": "#FFFFFF",
@@ -1989,7 +1989,7 @@
     },
     {
       "type": "section",
-      "background_color": "#FFF9F6",
+      "background_color": "#F5F2EC",
       "margin_bottom": 0,
       "children": [
         {
@@ -2022,7 +2022,7 @@
                 },
                 {
                   "type": "divider",
-                  "border_color": "#C9A27E",
+                  "border_color": "#A8834F",
                   "border_width": 1,
                   "width": 60,
                   "padding_top": 2,
@@ -2044,7 +2044,7 @@
                   "type": "bullet",
                   "content": "<ul><li>これを知るだけで反応の取れるページに変わります！<strong>売れるテンプレートとは？</strong></li><li>内容をわかりやすく伝えるだけでは意味がありません。<strong>素人が知らないキャッチコピーの秘密とは？</strong></li><li>ターゲットを絞るとなぜ売れるようになるの？<strong>プロでも知らない売れる広告の秘密とは？</strong></li><li>実は集客ライティングで難しいのは２箇所だけ。<strong>これだけできればAIには真似できない売れるLPが作れます</strong></li><li>ここが決まらなければ全く売れることはありません。<strong>セミナーコンセプトメイキングのテクニックとは？</strong></li><li>リサーチでは何を質問すればいいのか？<strong>プロのライターが使う質問集をプレゼント！</strong></li><li>あなたのライティング力をアップさせる、<strong>小嶋式トレーニング法とは？</strong></li></ul>",
                   "check_style": "check-fa-check",
-                  "check_color": "#D46A82",
+                  "check_color": "#2E5A73",
                   "font_size": 16,
                   "font_size_mobile": 15,
                   "line_height": "1.8",
@@ -2057,7 +2057,7 @@
               "padding_top": 6,
               "padding_bottom": 4,
               "border_width": 1,
-              "border_color": "#F2C4CD",
+              "border_color": "#C5D3DB",
               "border_style": "solid"
             }
           ]
@@ -2084,8 +2084,8 @@
                   "link_target": "same",
                   "cv_tracking": 1,
                   "button_color": "btn-red-pill",
-                  "background_color": "#E7849A",
-                  "background_color_to": "#F2AE9E",
+                  "background_color": "#2E5A73",
+                  "background_color_to": "#4F7F91",
                   "gradient_degree": "90",
                   "color": "#FFFFFF",
                   "sub_color": "#FFFFFF",
@@ -2114,7 +2114,7 @@
     },
     {
       "type": "section",
-      "background_color": "#FBE9EC",
+      "background_color": "#E7EDF0",
       "margin_bottom": 0,
       "children": [
         {
@@ -2147,7 +2147,7 @@
                 },
                 {
                   "type": "divider",
-                  "border_color": "#C9A27E",
+                  "border_color": "#A8834F",
                   "border_width": 1,
                   "width": 60,
                   "padding_top": 2,
@@ -2167,12 +2167,12 @@
               "children": [
                 {
                   "type": "image-text",
-                  "image_url": "https://placehold.jp/24/F4D6DB/B8506A/400x400.png?text=%E8%AC%9B%E5%B8%AB%E5%86%99%E7%9C%9F",
+                  "image_url": "https://placehold.jp/24/D6E0E6/1F3A52/400x400.png?text=%E8%AC%9B%E5%B8%AB%E5%86%99%E7%9C%9F",
                   "image_position": "left",
                   "image_width": "35",
                   "image_width_mobile": "100",
                   "image_design": "circle",
-                  "content": "<p><span style=\"color:#C9A27E;font-size:13px;\">株式会社オン・プレーン 代表取締役</span></p><p><span style=\"color:#B8506A;font-size:26px;font-weight:bold;\">小嶋 優來</span> <span style=\"color:#5B4A50;font-size:13px;\">（おじま）</span></p><p><span>言葉の力を使って中小企業の集客、販売促進を支援するコピーライター 兼 マーケティングコンサルタント。</span></p>",
+                  "content": "<p><span style=\"color:#A8834F;font-size:13px;\">株式会社オン・プレーン 代表取締役</span></p><p><span style=\"color:#1F3A52;font-size:26px;font-weight:bold;\">小嶋 優來</span> <span style=\"color:#2F3A45;font-size:13px;\">（おじま）</span></p><p><span>言葉の力を使って中小企業の集客、販売促進を支援するコピーライター 兼 マーケティングコンサルタント。</span></p>",
                   "font_size": 15,
                   "font_size_mobile": 14,
                   "line_height": "1.8"
@@ -2226,7 +2226,7 @@
               "children": [
                 {
                   "type": "image",
-                  "image_url": "https://placehold.jp/24/F4D6DB/B8506A/300x420.png?text=%E6%9B%B8%E5%BD%B1",
+                  "image_url": "https://placehold.jp/24/D6E0E6/1F3A52/300x420.png?text=%E6%9B%B8%E5%BD%B1",
                   "width": 200,
                   "align": "center",
                   "padding_bottom": 0
@@ -2239,7 +2239,7 @@
               "children": [
                 {
                   "type": "text",
-                  "content": "<p><span style=\"color:#C9A27E;font-size:13px;letter-spacing:0.15em;\">BOOK</span></p><p><span style=\"color:#B8506A;font-size:20px;font-weight:bold;\">『うまくいっている会社の<br>非常識な儲け方』</span></p><p><span>2023年2月 すばる舎より出版。<br>紀伊國屋書店、丸善、有隣堂など大型書店で<span class=\"r b\">ランキング１位</span>をはじめ上位を獲得。</span></p>",
+                  "content": "<p><span style=\"color:#A8834F;font-size:13px;letter-spacing:0.15em;\">BOOK</span></p><p><span style=\"color:#1F3A52;font-size:20px;font-weight:bold;\">『うまくいっている会社の<br>非常識な儲け方』</span></p><p><span>2023年2月 すばる舎より出版。<br>紀伊國屋書店、丸善、有隣堂など大型書店で<span class=\"r b\">ランキング１位</span>をはじめ上位を獲得。</span></p>",
                   "font_size": 15,
                   "font_size_mobile": 14,
                   "line_height": "1.8",
@@ -2274,7 +2274,7 @@
     },
     {
       "type": "section",
-      "background_color": "#E7849A",
+      "background_color": "#1F3A52",
       "margin_bottom": 0,
       "children": [
         {
@@ -2323,10 +2323,10 @@
                   "cv_tracking": 1,
                   "button_color": "btn-red-pill",
                   "background_color": "#FFFFFF",
-                  "background_color_to": "#FFF4F1",
+                  "background_color_to": "#F3F6F7",
                   "gradient_degree": "90",
-                  "color": "#D46A82",
-                  "sub_color": "#D46A82",
+                  "color": "#2E5A73",
+                  "sub_color": "#2E5A73",
                   "font_size": 22,
                   "font_size_mobile": 18,
                   "sub_font_size": 13,
@@ -2348,7 +2348,7 @@
           ]
         }
       ],
-      "background_color_to": "#F2B8A8",
+      "background_color_to": "#3E6A80",
       "gradient_degree": "135",
       "element_name": "最終CTA"
     },
@@ -2367,7 +2367,7 @@
               "children": [
                 {
                   "type": "text",
-                  "content": "<p class=\"tc\"><span style=\"color:#9C8A90;\">© 株式会社オン・プレーン All Rights Reserved.</span></p>",
+                  "content": "<p class=\"tc\"><span style=\"color:#8A939B;\">© 株式会社オン・プレーン All Rights Reserved.</span></p>",
                   "font_size": 12,
                   "font_size_mobile": 11,
                   "line_height": "2.0",
