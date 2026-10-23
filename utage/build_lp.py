@@ -94,7 +94,7 @@ E = []
 E.append(section([
     row([col([
         spacer(30, 20),
-        text(f'<p style="text-align:center;"><span style="color:{WHITE};background-color:{ROSE};border-radius:999px;padding:6px 16px;font-weight:bold;">未経験OK！</span>　<span style="color:{WHITE};background-color:{ROSE};padding:6px 16px;font-weight:bold;">女性OK！</span>　<span style="color:{WHITE};background-color:{ROSE};padding:6px 16px;font-weight:bold;">自分のためでもOK！</span></p>', fs=15, fsm=12, lh="2.6", pb=4),
+        text(f'<p style="text-align:center;"><span style="color:{WHITE};background-color:{ROSE};border-radius:999px;padding:6px 16px;font-weight:bold;">未経験OK！</span>　<span style="color:{WHITE};background-color:{ROSE};padding:6px 16px;font-weight:bold;">女性OK！</span>　<span style="color:{WHITE};background-color:{ROSE};padding:6px 16px;font-weight:bold;">自分のためでもOK！</span></p>', fs=20, fsm=15, lh="2.6", pb=4),
         sub(lines("起業、副業に最適な今話題の", f"<strong>AIを活用した{rose('コピーライター')}に</strong>", "なりませんか？"), fs=24, fsm=19),
         spacer(10, 6),
         text(P(f"たった{rose('７つのテンプレート')}で集客ページを完成させる"), fs=17, fsm=14, lh="1.6", pb=1),
@@ -400,12 +400,44 @@ def comp(o):
         for a,b in REPL: o=o.replace(a,b)
     return o
 out["elements"]=comp(out["elements"])
+
+# ---------- context illustrations: floated top-right inside chosen text blocks ----------
+import os, re as _re
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "illustrations"))
+from make_illustrations import SCENES
+FIGS = {  # unique text in the block -> illustration
+    "そんなあなたに": "01_free_work",
+    "象徴的な出来事があります。": "02_ai_editor",
+    "40代女性に向けた広告": "03_heart_night",
+    "シリコンバレーに象徴": "04_wave",
+    "会社は毎日、": "05_office_words",
+    "この働き方なら、": "06_night_desk",
+    "そのとき初めて、": "07_crossroads",
+    "実は、プロのコピーライターも": "08_swipe_files",
+}
+def fig(name):
+    svg = _re.sub(r"(\d+\.\d)\d+", r"\1", SCENES[name])
+    svg = svg.replace('"', "'").replace("%", "%25").replace("#", "%23").replace("<", "%3C").replace(">", "%3E")
+    return f'<img class="fig" alt="" src="data:image/svg+xml,{svg}">'
+placed = set()
+def add_figs(o):
+    if isinstance(o, dict):
+        if o.get("type") == "text":
+            for key, name in FIGS.items():
+                if key in o["content"] and name not in placed:
+                    o["content"] = fig(name) + o["content"] + '<p class="clr"><br></p>'
+                    placed.add(name)
+        for c in o.get("children", []): add_figs(c)
+for e in out["elements"]: add_figs(e)
+assert placed == set(FIGS.values()), set(FIGS.values()) - placed
 out["page_settings"]["css"] += """
 .tc{text-align:center}.b{font-weight:bold}.r{color:#2E5A73}.rd{color:#1F3A52}.g{color:#A8834F}.w{color:#fff}.ls{letter-spacing:.25em}
 .f26{font-size:26px}.f32{font-size:32px}.f36{font-size:36px}
 .mk{background:linear-gradient(transparent 60%,#D3E0E8 60%);font-weight:bold}
 .badge{color:#fff;background:#2E5A73;border-radius:999px;padding:6px 16px;font-weight:bold;white-space:nowrap}
 p{color:#2F3A45}
-@media(max-width:600px){.f36{font-size:28px}.f32{font-size:24px}.f26{font-size:22px}}"""
+.fig{float:right;width:40%;max-width:250px;height:auto;margin:4px 0 14px 18px;border-radius:18px;box-shadow:0 6px 18px rgba(31,58,82,.12)}
+.clr{clear:both;margin:0;line-height:0}
+@media(max-width:600px){.f36{font-size:28px}.f32{font-size:24px}.f26{font-size:22px}.fig{width:44%;margin:2px 0 10px 12px}}"""
 json.dump(out, open(sys.argv[1], "w"), ensure_ascii=False, indent=2)
 print("sections:", len(E))
